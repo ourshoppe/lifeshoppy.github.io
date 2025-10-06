@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lyf Shoppe — Product Catalog</title>
+<style>
+
+:root{
+  --blue-dark:#004aad;
+  --blue:#007BFF;
+  --blue-hover:#0056b3;
+  --panel:#f4f7ff;
+  --border:#d2e3ff;
+  --body:#ffffff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--body);color:#111;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji}
+a{color:var(--blue);text-decoration:none}
+a:hover,a:focus{color:var(--blue-hover);text-decoration:underline;outline:none}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+header{background:#fff;border-bottom:1px solid var(--border);}
+.topbar{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;gap:12px}
+.topbar img{height:44px;width:auto;display:block}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:16px;flex-wrap:wrap}
+nav a{font-weight:600}
+.layout{max-width:1200px;margin:0 auto;padding:16px;display:grid;grid-template-columns:250px 1fr;gap:16px}
+@media (max-width:900px){.layout{grid-template-columns:1fr}}
+.sidebar{background:var(--panel);border:1px solid var(--border);padding:12px;border-radius:8px;position:sticky;top:12px;height:max-content}
+.sidebar h2{font-size:18px;margin:0 0 8px;color:var(--blue-dark)}
+.sidebar a{display:block;padding:6px 8px;border-radius:6px}
+.sidebar a:hover{background:#eaf1ff}
+main section{margin:24px 0;padding:16px;background:#fff;border:1px solid var(--border);border-radius:10px}
+h1,h2,h3{line-height:1.2}
+h1{font-size:28px;color:#111;margin:0 0 8px}
+.category-title{font-size:22px;color:var(--blue-dark);margin:0 0 6px}
+.tagline{color:#333;margin:0 0 12px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px}
+.card a{font-weight:600;display:inline-block}
+.contact{background:var(--panel);border:1px solid var(--border);padding:12px;border-radius:10px}
+footer{margin-top:32px;background:var(--blue-dark);color:#fff}
+.footer-inner{max-width:1200px;margin:0 auto;padding:16px;text-align:center;font-size:14px}
+.breadcrumb{font-size:14px;margin:8px 0 16px}
+.breadcrumb a{color:var(--blue)}
+.backlink{display:inline-block;margin-top:16px}
+hr.sep{border:none;border-top:1px solid var(--border);margin:8px 0 16px 0}
+
+</style>
+</head>
+<body>
+<a href="#main" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+
+<header role="banner">
+  <div class="topbar">
+    <a href="index.html" aria-label="Lyf Shoppe Home">
+      <img src="LOGO.jpg" alt="Lyf Shoppe logo">
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#categories">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" aria-label="Browse">
+    <h2>Browse Categories</h2>
+    <a href="#anesthesia">Anesthesia</a>
+    <a href="#central-sterile">Central Sterile</a>
+    <a href="#lab-supplies">Lab Supplies</a>
+    <a href="#or-surgical">OR / Surgical</a>
+    <a href="#pharmacy">Pharmacy</a>
+    <a href="#vascular-access">Vascular Access</a>
+  </aside>
+
+  <main id="main" tabindex="-1">
+    <section aria-labelledby="intro-title">
+      <h1 id="intro-title">Lyf Shoppe Product Catalog</h1>
+      <p>Explore our streamlined medical catalog. Clean, mobile-friendly browsing with quick access to key sub-products across Anesthesia, Central Sterile, Lab Supplies, OR / Surgical, Pharmacy, and Vascular Access.</p>
+      <hr class="sep">
+    </section>
+
+    <section id="categories" aria-label="Categories">
+      <!-- Anesthesia -->
+      <section id="anesthesia">
+        <h2 class="category-title">Anesthesia</h2>
+        <p class="tagline">We handle the products so you can concentrate on the patient.</p>
+        <div class="grid">
+          <div class="card"><a href="products/anesthesia/general-anesthesia.html">General Anesthesia</a></div>
+          <div class="card"><a href="products/anesthesia/monitored-anesthesia.html">Monitored Anesthesia</a></div>
+          <div class="card"><a href="products/anesthesia/pain-management.html">Pain Management</a></div>
+          <div class="card"><a href="products/anesthesia/regional-anesthesia.html">Regional Anesthesia</a></div>
+        </div>
+      </section>
+
+      <!-- Central Sterile -->
+      <section id="central-sterile">
+        <h2 class="category-title">Central Sterile</h2>
+        <p class="tagline">Maintain stringent standards with fully compliant tools.</p>
+        <div class="grid">
+          <div class="card"><a href="products/central-sterile/sterilization-monitoring-products.html">Sterilization Monitoring Products</a></div>
+          <div class="card"><a href="products/central-sterile/sterilization-pouches.html">Sterilization Pouches</a></div>
+          <div class="card"><a href="products/central-sterile/sterilization-wrap.html">Sterilization Wrap</a></div>
+        </div>
+      </section>
+
+      <!-- Lab Supplies -->
+      <section id="lab-supplies">
+        <h2 class="category-title">Lab Supplies</h2>
+        <p class="tagline">Stock up on all the lab supplies that you rely on.</p>
+        <div class="grid">
+          <div class="card"><a href="products/lab-supplies/blood-collection-needles.html">Blood Collection Needles</a></div>
+          <div class="card"><a href="products/lab-supplies/blood-collection-sets.html">Blood Collection Sets</a></div>
+          <div class="card"><a href="products/lab-supplies/blood-collection-tubes.html">Blood Collection Tubes</a></div>
+          <div class="card"><a href="products/lab-supplies/specimen-sample-collection.html">Specimen / Sample Collection</a></div>
+        </div>
+      </section>
+
+      <!-- OR / Surgical -->
+      <section id="or-surgical">
+        <h2 class="category-title">OR / Surgical</h2>
+        <p class="tagline">Minimize delays by partnering with us for on-time delivery of all your essential OR supplies.</p>
+        <div class="grid">
+          <div class="card"><a href="products/or-surgical/cath-labs.html">Cath Labs</a></div>
+          <div class="card"><a href="products/or-surgical/chest-drains.html">Chest Drains</a></div>
+          <div class="card"><a href="products/or-surgical/skin-prep-and-scrub-solutions.html">Skin Prep and Scrub Solutions</a></div>
+          <div class="card"><a href="products/or-surgical/sterile-procedure-packs.html">Sterile Procedure Packs</a></div>
+          <div class="card"><a href="products/or-surgical/surgical-drapes-and-gowns.html">Surgical Drapes and Gowns</a></div>
+        </div>
+      </section>
+
+      <!-- Pharmacy -->
+      <section id="pharmacy">
+        <h2 class="category-title">Pharmacy</h2>
+        <p class="tagline">We have what you need — Always Stocked. Always Ready.</p>
+        <div class="grid">
+          <div class="card"><a href="products/pharmacy/over-the-counter-drugs.html">Over-the-Counter Drugs</a></div>
+          <div class="card"><a href="products/pharmacy/prescription-drugs-hard-to-find-shortage.html">Prescription Drugs (Hard-to-Find / Shortage)</a></div>
+          <div class="card"><a href="products/pharmacy/pharmacy-supply.html">Pharmacy Supply</a></div>
+        </div>
+      </section>
+
+      <!-- Vascular Access -->
+      <section id="vascular-access">
+        <h2 class="category-title">Vascular Access</h2>
+        <p class="tagline">We are your one stop shop for Fluid Management.</p>
+        <div class="grid">
+          <div class="card"><a href="products/vascular-access/access-adapters.html">Access Adapters</a></div>
+          <div class="card"><a href="products/vascular-access/connecting-tubes.html">Connecting Tubes</a></div>
+          <div class="card"><a href="products/vascular-access/fluid-administration.html">Fluid Administration</a></div>
+          <div class="card"><a href="products/vascular-access/stopcocks.html">Stopcocks</a></div>
+        </div>
+      </section>
+    </section>
+
+    <section id="contact" class="contact" aria-label="Contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:inbox@lyfshoppe.com">inbox@lyfshoppe.com</a> • <a href="tel:4805768768">480-576-8768</a></p>
+    </section>
+  </main>
+</div>
+
+<footer role="contentinfo">
+  <div class="footer-inner">© 2025 Lyf Shoppe • inbox@lyfshoppe.com • 480-576-8768</div>
+</footer>
+
+</body>
+</html>
