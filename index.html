@@ -5,12 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lyf Shoppe | Product Catalog</title>
   <style>
+    :root {
+      --brand: #007BFF;
+      --brand-dark: #0056b3;
+      --background: #ffffff;
+      --light-accent: #eef5ff;
+      --text-dark: #222;
+      --text-muted: #555;
+    }
+
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
-      color: #333;
+      background-color: var(--background);
+      color: var(--text-dark);
     }
 
     header {
@@ -23,42 +32,43 @@
     }
 
     header img {
-      height: 50px;
+      height: 55px;
     }
 
     nav a {
       text-decoration: none;
-      color: #007BFF;
+      color: var(--brand);
       margin: 0 15px;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--brand-dark);
     }
 
     .hero {
       text-align: center;
       padding: 3rem 1rem;
-      background-color: #f8f9fa;
+      background-color: var(--light-accent);
     }
 
     .hero h1 {
-      color: #007BFF;
+      color: var(--brand);
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
     .hero p {
-      font-size: 1.2rem;
-      color: #555;
+      font-size: 1.1rem;
+      color: var(--text-muted);
       max-width: 700px;
       margin: 0 auto;
     }
 
     .categories {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
       padding: 3rem 2rem;
     }
@@ -67,24 +77,24 @@
       border: 1px solid #ddd;
       border-radius: 10px;
       padding: 1.5rem;
+      background-color: #fff;
+      transition: all 0.3s ease;
       text-align: center;
-      background-color: #ffffff;
-      transition: 0.3s;
     }
 
     .category:hover {
-      border-color: #007BFF;
+      border-color: var(--brand);
       box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
-      transform: translateY(-3px);
+      transform: translateY(-4px);
     }
 
     .category h2 {
-      color: #007BFF;
+      color: var(--brand);
       margin-bottom: 0.5rem;
     }
 
     .category p {
-      color: #555;
+      color: var(--text-muted);
       font-size: 0.95rem;
       margin-bottom: 1rem;
     }
@@ -92,29 +102,30 @@
     .category a {
       display: inline-block;
       text-decoration: none;
-      color: #007BFF;
+      color: var(--brand-dark);
       font-weight: 600;
     }
 
     .contact {
-      background-color: #f8f9fa;
+      background-color: var(--light-accent);
       text-align: center;
       padding: 3rem 1rem;
     }
 
     .contact h2 {
-      color: #007BFF;
+      color: var(--brand);
       font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
 
     .contact p {
       font-size: 1.1rem;
-      color: #333;
-      margin: 0.5rem 0;
+      color: var(--text-dark);
+      margin: 0.3rem 0;
     }
 
     footer {
-      background-color: #007BFF;
+      background-color: var(--brand);
       color: #ffffff;
       text-align: center;
       padding: 1rem;
@@ -122,8 +133,8 @@
     }
   </style>
 </head>
-
 <body>
+
   <header>
     <img src="LOGO.jpg" alt="Lyf Shoppe Logo" />
     <nav>
@@ -171,4 +182,21 @@
 
     <div class="category">
       <h2>Vascular Access</h2>
-      <p>We are your one-stop shop for Fluid
+      <p>We are your one-stop shop for Fluid Management.</p>
+      <a href="products/vascular-access/access-adapters.html">View Products →</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 480-576-8768</p>
+    <p>✉️ inbox@lyfshoppe.com</p>
+  </section>
+
+  <footer>
+    © 2025 Lyf Shoppe | inbox@lyfshoppe.com | 480-576-8768
+  </footer>
+
+</body>
+</html>
+
