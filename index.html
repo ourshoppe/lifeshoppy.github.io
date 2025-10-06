@@ -1,159 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LiveShoppy • Product Catalog</title>
-  <meta name="description" content="LiveShoppy product portfolio – anesthesia, central sterile, lab supplies, OR/surgical, pharmacy, vascular access." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lyf Shoppe | Product Catalog</title>
   <style>
-    :root {
-      --bg: #f6f8fb;
-      --surface: #ffffff;
-      --border: #e5e9f2;
-      --text: #0b1f33;
-      --muted: #5a6b85;
-      --brand: #0f9aa9;     /* teal primary */
-      --brand-dark: #0b7f80;
-      --chip: #e6f7f8;
-      --shadow: 0 6px 24px rgba(18, 38, 63, 0.06);
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #333;
     }
-    * { box-sizing: border-box; }
-    html, body { margin:0; padding:0; }
-    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:var(--bg); color:var(--text); line-height:1.5; }
-    a { color: var(--brand); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    header { position: sticky; top: 0; z-index: 30; background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow); }
-    .wrap { width: min(1200px, 94vw); margin: 0 auto; }
-    .topbar { display:flex; align-items:center; gap:12px; padding:12px 0; }
-    .brand { display:flex; align-items:center; gap:10px; }
-    .brand img { height:36px; border-radius:4px; }
-    .toplinks { margin-left:auto; display:flex; align-items:center; gap:16px; }
-    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; background:var(--brand); color:#fff; border-radius:12px; border:1px solid #0a6d71; text-decoration:none; font-weight:650; }
-    .btn:hover { background: var(--brand-dark); }
-    .search input { width: min(420px, 60vw); padding:10px 12px; border-radius:12px; border:1px solid var(--border); background:#fbfeff; }
-    .search input:focus { outline:2px solid #b9ecf0; border-color:#82dde5; }
-    .layout { display:grid; grid-template-columns:270px 1fr; gap:20px; padding:22px 0; }
-    @media (max-width:920px) { .layout { grid-template-columns:1fr; } .toplinks{flex-wrap:wrap;} }
-    .sidebar { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); height:fit-content; position:sticky; top:78px; }
-    .sidebar h3 { margin:0 0 8px; font-size:16px; color:var(--muted); font-weight:600; }
-    .side-list { list-style:none; padding:0; margin:0; }
-    .side-list li { margin:4px 0; }
-    .side-link { display:block; padding:12px 12px; border-radius:12px; border:1px solid transparent; }
-    .side-link.active, .side-link:hover { background:var(--chip); border-color:#b9ecf0; text-decoration:none; }
-    .panel { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow); }
-    .hero { padding:8px 12px 14px; border-bottom:1px solid var(--border); }
-    .hero h1 { margin:6px 0 4px; font-size: clamp(22px, 3.8vw, 32px); }
-    .stat { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:var(--chip); border:1px solid #b9ecf0; color:#0b7f80; font-weight:600; }
-    .lead { color:var(--muted); margin:6px 0 0; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; padding-top:16px; }
-    .card { border:1px solid var(--border); border-radius:16px; padding:16px; background:#fff; box-shadow:var(--shadow); transition: transform .08s ease, box-shadow .08s ease; }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(18,38,63,.08); }
-    .card a { font-weight:700; color:#0b7f80; }
-    .empty { padding: 30px; text-align: center; color: var(--muted); }
-    .contact { margin-top:26px; background:var(--chip); border:1px solid #b9ecf0; padding:16px; border-radius:16px; }
-    .contact h3 { margin:0 0 8px; color:#0b7f80; }
-    footer { margin:26px 0 40px; color:#5a6b85; font-size:14px; text-align:center; }
-    </style>
+
+    header {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #007BFF;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #f8f9fa;
+    }
+
+    .hero h1 {
+      color: #007BFF;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+    }
+
+    .category {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      background-color: #ffffff;
+      transition: 0.3s;
+    }
+
+    .category:hover {
+      border-color: #007BFF;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .category h2 {
+      color: #007BFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .category p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .category a {
+      display: inline-block;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: 600;
+    }
+
+    .contact {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .contact h2 {
+      color: #007BFF;
+      font-size: 1.8rem;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      background-color: #007BFF;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
+
 <body>
   <header>
-    <div class="wrap topbar">
-      <!-- Header: logo only -->
-      <div class="brand">
-        <img src="LOGO.jpg" alt="LiveShoppy Logo" />
-      </div>
-      <div class="toplinks">
-        <a class="btn" href="#contact">Contact</a>
-        <div class="search" role="search">
-          <input id="searchBox" type="search" placeholder="Search sub-products (e.g., Blood Collection Tubes)" aria-label="Search sub-products" />
-        </div>
-      </div>
-    </div>
+    <img src="LOGO.jpg" alt="Lyf Shoppe Logo" />
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
   </header>
 
-  <main class="wrap layout">
-    <aside class="sidebar" aria-label="Product categories">
-      <h3>Browse Categories</h3>
-      <ul class="side-list" id="sideList">
-        <li><a class="side-link active" href="#" data-cat="Anesthesia">Anesthesia</a></li>
-        <li><a class="side-link" href="#" data-cat="Central Sterile">Central Sterile</a></li>
-        <li><a class="side-link" href="#" data-cat="Lab Supplies">Lab Supplies</a></li>
-        <li><a class="side-link" href="#" data-cat="OR / Surgical">OR / Surgical</a></li>
-        <li><a class="side-link" href="#" data-cat="Pharmacy">Pharmacy</a></li>
-        <li><a class="side-link" href="#" data-cat="Vascular Access">Vascular Access</a></li>
-      </ul>
-    </aside>
+  <section class="hero">
+    <h1>Our Product Catalog</h1>
+    <p>Explore Lyf Shoppe's comprehensive range of medical products designed to meet the highest standards of safety, quality, and performance.</p>
+  </section>
 
-    <section class="panel">
-      <div class="hero">
-        <span class="stat">100,000+ medical products</span>
-        <h1 id="title">Anesthesia</h1>
-        <p class="lead" id="tagline">We handle the products so you can concentrate on the patient.</p>
-      </div>
+  <section id="products" class="categories">
+    <div class="category">
+      <h2>Anesthesia</h2>
+      <p>We handle the products so you can concentrate on the patient.</p>
+      <a href="products/anesthesia/general-anesthesia.html">View Products →</a>
+    </div>
 
-      <div id="products" class="grid" aria-live="polite"></div>
-      <div id="emptyMsg" class="empty" style="display:none;">No items match your search.</div>
+    <div class="category">
+      <h2>Central Sterile</h2>
+      <p>Maintain stringent standards with fully compliant tools.</p>
+      <a href="products/central-sterile/sterilization-monitoring-products.html">View Products →</a>
+    </div>
 
-      <!-- New Contact Us section -->
-      <div id="contact" class="contact">
-        <h3>Contact Us</h3>
-        <p>For product inquiries or more information, reach out to us:</p>
-        <p><strong>Email:</strong> <a href="mailto:inbox@lyfshoppe.com">inbox@lyfshoppe.com</a><br>
-           <strong>Phone:</strong> <a href="tel:+14805768768">(480) 576-8768</a></p>
-      </div>
-    </section>
-  </main>
+    <div class="category">
+      <h2>Lab Supplies</h2>
+      <p>Stock up on all the lab supplies that you rely on.</p>
+      <a href="products/lab-supplies/blood-collection-needles.html">View Products →</a>
+    </div>
 
-  <footer class="wrap">
-    © <span id="year"></span> LiveShoppy • Product Portfolio
-  </footer>
+    <div class="category">
+      <h2>OR / Surgical</h2>
+      <p>Minimize delays by partnering with us for on-time delivery of all your essential OR supplies.</p>
+      <a href="products/or-surgical/cath-labs.html">View Products →</a>
+    </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <div class="category">
+      <h2>Pharmacy</h2>
+      <p>We have what you need — Always Stocked. Always Ready.</p>
+      <a href="products/pharmacy/over-the-counter-drugs.html">View Products →</a>
+    </div>
 
-    const DATA = {"Anesthesia": ["General Anesthesia", "Monitored Anesthesia", "Pain Management", "Regional Anesthesia"], "Central Sterile": ["Sterilization Monitoring Products", "Sterilization Pouches", "Sterilization Wrap"], "Lab Supplies": ["Blood Collection Needles", "Blood Collection Sets", "Blood Collection Tubes", "Specimen Sample Collection"], "OR / Surgical": ["Cath Labs", "Chest Drains", "Skin Prep and Scrub Solutions", "Sterile Procedure Packs", "Surgical Drapes and Gowns"], "Pharmacy": ["Over-the-Counter Drugs", "Prescription Drugs (hard-to-find & shortage)", "Pharmacy Supply"], "Vascular Access": ["Access Adapters", "Connecting Tubes", "Fluid Administration", "Stopcocks"]};
-    const TAGLINES = {"Anesthesia": "We handle the products so you can concentrate on the patient.", "Central Sterile": "Maintain stringent standards with fully compliant tools.", "Lab Supplies": "Stock up on all the lab supplies that you rely on.", "OR / Surgical": "Minimize delays by partnering with us for on-time delivery of all your essential OR supplies.", "Pharmacy": "We have what you need - Always Stocked. Always Ready.", "Vascular Access": "We are your one stop shop for Fluid Management."};
-
-    const title = document.getElementById('title');
-    const tagline = document.getElementById('tagline');
-    const grid = document.getElementById('products');
-
-    function slug(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); }
-    function linkFor(cat, item) { return 'products/' + slug(cat) + '/' + slug(item) + '.html'; }
-
-    function render(cat, query='') {
-      title.textContent = cat;
-      tagline.textContent = TAGLINES[cat];
-      const q = query.toLowerCase();
-      grid.innerHTML = '';
-      DATA[cat].forEach(function(name) {
-        if (!q || name.toLowerCase().includes(q)) {
-          const href = linkFor(cat, name);
-          const card = document.createElement('div');
-          card.className = 'card';
-          card.innerHTML = '<a href="' + href + '">' + name + '</a>';
-          grid.appendChild(card);
-        }
-      });
-    }
-
-    let current = 'Anesthesia';
-    render(current);
-
-    document.querySelectorAll('.side-link').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelectorAll('.side-link').forEach(function(l) { l.classList.remove('active'); });
-        link.classList.add('active');
-        current = link.dataset.cat;
-        render(current, document.getElementById('searchBox').value);
-        document.getElementById('products').scrollIntoView({behavior:'smooth'});
-      });
-    });
-
-    document.getElementById('searchBox').addEventListener('input', function(e) {
-      render(current, e.target.value);
-    });
-  </script>
-</body>
-</html>
+    <div class="category">
+      <h2>Vascular Access</h2>
+      <p>We are your one-stop shop for Fluid
