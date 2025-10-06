@@ -1,1 +1,225 @@
-<html><body><h1>Lyf Shoppe Blue Site (placeholder for upload)</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lyf Shoppe | Product Catalog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #222;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 50px;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      padding: 20px 50px;
+    }
+
+    .sidebar {
+      width: 220px;
+      border-right: 2px solid #e3e3e3;
+      padding-right: 20px;
+    }
+
+    .sidebar h2 {
+      color: #004aad;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      padding: 10px 0;
+      cursor: pointer;
+      color: #004aad;
+      font-weight: 500;
+    }
+
+    .sidebar li:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 0 20px;
+    }
+
+    .category {
+      display: none;
+    }
+
+    .category.active {
+      display: block;
+    }
+
+    .sub-product {
+      background: #f4f7ff;
+      border: 1px solid #d2e3ff;
+      border-radius: 10px;
+      margin: 15px 0;
+      padding: 15px;
+    }
+
+    .sub-product h3 {
+      color: #004aad;
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: #004aad;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    .contact-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact-section button {
+      background-color: #004aad;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .contact-section button:hover {
+      background-color: #003b8b;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="LOGO.jpg" alt="Lyf Shoppe Logo" />
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Browse Categories</h2>
+      <ul>
+        <li onclick="showCategory('anesthesia')">Anesthesia</li>
+        <li onclick="showCategory('central')">Central Sterile</li>
+        <li onclick="showCategory('lab')">Lab Supplies</li>
+        <li onclick="showCategory('surgical')">OR / Surgical</li>
+        <li onclick="showCategory('pharmacy')">Pharmacy</li>
+        <li onclick="showCategory('vascular')">Vascular Access</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Comprehensive Medical Product Catalog</h1>
+      <p>Explore our full range of medical supplies designed for efficiency, safety, and reliability.</p>
+
+      <!-- Anesthesia -->
+      <div id="anesthesia" class="category active">
+        <h2>Anesthesia</h2>
+        <div class="sub-product"><h3>General Anesthesia</h3></div>
+        <div class="sub-product"><h3>Monitored Anesthesia</h3></div>
+        <div class="sub-product"><h3>Pain Management</h3></div>
+        <div class="sub-product"><h3>Regional Anesthesia</h3></div>
+      </div>
+
+      <!-- Central Sterile -->
+      <div id="central" class="category">
+        <h2>Central Sterile</h2>
+        <div class="sub-product"><h3>Sterilization Wraps</h3></div>
+        <div class="sub-product"><h3>Indicator Tapes</h3></div>
+        <div class="sub-product"><h3>Instrument Trays</h3></div>
+      </div>
+
+      <!-- Lab Supplies -->
+      <div id="lab" class="category">
+        <h2>Lab Supplies</h2>
+        <div class="sub-product"><h3>Blood Collection Tubes</h3></div>
+        <div class="sub-product"><h3>Petri Dishes</h3></div>
+        <div class="sub-product"><h3>Pipettes</h3></div>
+      </div>
+
+      <!-- OR / Surgical -->
+      <div id="surgical" class="category">
+        <h2>OR / Surgical</h2>
+        <div class="sub-product"><h3>Scalpels</h3></div>
+        <div class="sub-product"><h3>Surgical Drapes</h3></div>
+        <div class="sub-product"><h3>Sutures</h3></div>
+      </div>
+
+      <!-- Pharmacy -->
+      <div id="pharmacy" class="category">
+        <h2>Pharmacy</h2>
+        <div class="sub-product"><h3>Medication Organizers</h3></div>
+        <div class="sub-product"><h3>Dispensing Bottles</h3></div>
+        <div class="sub-product"><h3>Labels</h3></div>
+      </div>
+
+      <!-- Vascular Access -->
+      <div id="vascular" class="category">
+        <h2>Vascular Access — Your One Stop for Fluid Management</h2>
+        <div class="sub-product"><h3>Access Adapters</h3></div>
+        <div class="sub-product"><h3>Connecting Tubes</h3></div>
+        <div class="sub-product"><h3>Fluid Administration</h3></div>
+        <div class="sub-product"><h3>Stopcocks</h3></div>
+      </div>
+
+      <div class="contact-section">
+        <h3>Need assistance or want to place an order?</h3>
+        <button onclick="showContact()">Contact Us</button>
+        <p id="contact-info" style="display:none; margin-top:10px;">
+          Email: <a href="mailto:inbox@lyfshoppe.com">inbox@lyfshoppe.com</a> |
+          Phone: <a href="tel:4805768768">480-576-8768</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Lyf Shoppe • All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showCategory(id) {
+      const categories = document.querySelectorAll(".category");
+      categories.forEach(cat => cat.classList.remove("active"));
+      document
